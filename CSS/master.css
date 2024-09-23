@@ -1,0 +1,808 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    font-family: "Nunito", sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+*::selection {
+    background-color:#f9ca24;
+    color: #333;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+    width: 1.4rem;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: #222;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: #f9ca24;
+}
+
+body {
+    background-color: #111;
+    overflow-x: hidden;
+    padding-left: 35rem; 
+}
+
+section {
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color:#fff;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 2rem;
+    border-radius: 5rem;
+}
+
+.btn i {
+    padding: 0.7rem;
+    font-size: 1.5rem;
+}
+
+.btn:hover {
+    background-color: #f9ca24;
+
+}
+
+
+
+
+.lines span { /*  background عشان الخطوط الموجودة في ال */
+
+    position:fixed ;
+    top: 0;
+    z-index: -1;
+    height: 100%;
+    background-color: rgba(255, 224, 19, 0.06);
+    width: 1px;
+}
+
+.lines span:nth-child(1) {   /* عشان اخلي في مسافة بين كل خط   */
+    left: 10%;
+}
+.lines span:nth-child(2) {
+    left: 20%;
+}
+.lines span:nth-child(3) {
+    left: 30%;
+}
+.lines span:nth-child(4) {
+    left: 40%;
+}
+.lines span:nth-child(5) {
+    left: 50%;
+}
+.lines span:nth-child(6) {
+    left: 60%;
+}
+.lines span:nth-child(7) {
+    left: 70%;
+}
+.lines span:nth-child(8) {
+    left: 80%;
+}
+.lines span:nth-child(9) {
+    left: 90%;
+}
+.lines span:nth-child(10) {
+    left: 100%;
+}
+
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 100%;
+    width: 35rem;
+    background-color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+}
+
+header .user img {
+    height: 14rem;
+    width: 13rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 0.4rem solid #f9ca24;
+}
+
+header .user .name {
+    font-size: 3rem;
+    color: #fff;
+}
+
+header .user .post {
+    font-size: 2rem;
+    color: #ffffffe9;
+}
+
+header .navbar {
+    width: 100%;    
+}
+
+header .navbar ul {
+    list-style: none;
+    padding: 1rem 3rem;
+}
+
+
+header .navbar ul li a {
+    display: block;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    background-color: #333; 
+    color: #fff;
+    font-size: 2rem;
+    border-radius: 5rem;
+}
+
+header .navbar ul li a:hover {
+    background-color: #f9ca24;
+}
+
+
+#menu {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    background-color: #333;
+    color : #fff; 
+    cursor: pointer;
+    font-size: 2.5rem;
+    padding: 1rem 1.5rem;
+    z-index: 100;
+    display: none;
+}
+
+
+
+/* Home Section Start */
+
+.home {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    padding: 0 15rem;
+}
+
+.home h3 {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.home h1 {
+    font-size: 4rem;
+    color: #fff;
+}
+
+.home h1 span {
+    color: #f9ca24;
+}
+
+.home p {
+    font-size: 2rem;
+    color: #eee;
+    padding: 1rem 0;
+}
+
+.home p span {
+    color: #f9ca24;
+}
+
+
+/* Start About */
+
+.heading {
+    text-align: center;
+    margin: 0 6rem;
+    font-size: 4rem;
+    padding: 1rem;
+    border-bottom: 1px solid #fff4;
+    color: #fff;    
+}
+
+.heading span {
+    color: #f9ca24;
+}
+
+.about .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+}
+
+.about .row .info {
+    flex: 1 1 48rem; 
+    padding: 2rem 1em;
+    padding-left: 6rem;    
+}
+
+.about .row .info h3 {
+    font-size: 2.4rem;
+    color: #f9ca24;
+    padding: 1rem 0;
+    font-weight: normal;
+}
+
+.about .row .info h3 span {
+    color: #eee;
+    padding: 0.5rem;
+}
+
+.about .row .counter {
+    flex:1 1 48rem; 
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.about .row .counter .box {
+    width: 20rem;
+    background: #222;
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem;
+}
+
+.about .row .counter .box span {
+    font-size: 4rem;
+    color: #f9ca24;
+}
+
+.about .row .counter .box h3 {
+    font-size: 2rem;
+    color: #eee;
+
+}
+
+
+/* Education Section Start  */
+
+
+.education .box-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    flex-wrap: wrap;
+    padding: 1rem 0;
+    padding-left: 3rem;
+}
+
+.education .box-container .box {
+    width: 27rem;
+    margin: 4rem 1rem;
+    padding-left:4rem ;
+    border-left:2px solid #fff ;
+    position: relative;
+}
+
+
+.education .box-container .box span {
+    font-size: 1.3rem;
+    background: #222;
+    color: #fff;
+    border-radius: 5rem;
+    padding: 0.5rem 2.5rem;
+}
+
+.education .box-container .box h3 {
+    font-size: 1.69rem;
+    color:#fff;
+    padding-top: 1.5rem;
+}
+
+.education .box-container .box p {
+    font-size: 1.2rem;
+    color:#eee;
+    padding-top: 1rem 0;
+}
+
+.education .box-container .box i {
+    position: absolute;
+    top: -1.5rem;
+    left: -2.5rem;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    line-height: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    background-color: #f9ca24;
+}
+
+
+
+
+
+
+.contact .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact .row .content {
+    flex: 1 1 30rem;
+    padding: 4rem;
+    padding-bottom: 0;
+}
+
+.contact .row form {
+    flex: 1 1 45rem;
+    padding: 2rem;
+    margin: 2rem;
+    margin-bottom: 4rem;   
+}
+
+.contact .row form .box {
+    padding: 1.5rem;
+    margin: 1rem 0;
+    background: #3333;
+    color: #fff;
+    text-transform: none;
+    font-size: 1.7rem;
+    width: 100%
+}
+
+.contact .row form .input:hover {
+    border-color: #f9ca24;
+}
+
+.contact .row form .message {
+    height: 15rem;
+    resize: none;
+}
+
+.contact .row .content .title {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 3rem;
+    padding-bottom: 2rem;
+}
+
+
+.contact .row .content .info {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact .row .content .info a {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    left: 0;
+    transition: 0.3s; 
+}
+
+
+.contact .row .content .info a i {
+    color:#f9ca24;
+    margin-right: 7px;
+    width: 40px;
+    height: 45px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 45px;
+
+}
+
+.contact .row .content .info a:hover {
+    left: 13px;
+}
+.contact .row .content .title span {
+    color: #f9ca24;
+}
+
+
+.contact .row .form .message {
+    height: 1rem;
+    resize: none;
+
+}
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+@media (max-width:1800px) {
+    html {
+        font-size: 55%;
+    }
+    .home {
+        padding: 1rem 2rem;
+    }
+}
+
+@media (max-width:1200px) {
+    html {
+        font-size: 55%;
+    }
+    .home {
+        padding: 1rem 4rem;
+    }
+
+}
+
+@media (max-width:990px) {
+    header {
+        left: -120%; 
+    }
+    
+    #menu {
+        display: block;
+    }
+
+    header.toggle {
+        left: 0%; 
+    }
+
+    body {
+        padding: 0;
+    }
+
+    header {
+        width: 60vw; 
+    }
+
+    .about .row .counter .box {
+        width: 100%;
+    }
+    body {
+        padding: 10px;
+    }
+
+    header .user img {
+        height: 7rem;
+        width: 6.5rem;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 1rem;
+        border: 0.2rem solid #f9ca24;
+    }
+
+    header .user .name {
+        font-size: 1.7rem;
+        
+    }
+    
+    header .user .post {
+        font-size: 1.3rem;
+        
+    }
+
+    header .navbar ul li a {
+        padding: 0.8rem;
+        margin: 1rem 0;
+        font-size: 1.8rem;
+    }
+
+    .home h3 {
+        font-size: 5rem;
+    }
+    
+    .home h1 {
+        font-size: 4.8rem;
+    }
+
+    .home p {
+        font-size: 3.3rem;
+        padding: 0.8rem 0;
+    }
+
+    .heading {
+        margin: 0 4rem;
+        font-size: 6.4rem;
+    }
+
+    .about .row .info h3 {
+        font-size: 3.4rem;
+        padding: 1.3rem 0;
+        padding-right: 1.5rem;
+    }
+
+    .about .row .info .btn {
+        font-size: 3rem;
+        width: 29rem;
+        padding: 0.5rem 1.2rem;
+        margin-top: 1.7rem;
+        
+    }
+
+    .btn {
+        padding: 0.3rem 1rem;
+        margin-top: 1rem;
+        margin-right: 2rem;
+        font-size: 3.8rem;
+        width: 27rem;
+        
+    }
+
+    .btn i {
+        padding: 1rem;
+        font-size: 3rem;
+    }
+
+    .education .box-container .bo {
+        width: 100%;
+    }
+
+}
+
+@media (max-width:860px) {
+    html {
+        font-size: 90%;
+    }
+    .heading {
+        margin: 0 3rem;
+    }
+
+    .about .row .counter .box {
+        width: 65%;
+    }
+
+    header {
+        width: 70vw; 
+    }
+
+    .about .row .counter .box {
+        width: 100%;
+    }
+    body {
+        padding: 20px;
+    }
+
+    header .user img {
+        height: 10rem;
+        width: 9rem;
+        margin-bottom: 1rem;
+        border: 0.4rem solid #f9ca24;
+    }
+
+    header .user .name {
+        font-size: 2rem;
+        
+    }
+    
+    header .user .post {
+        font-size: 1.5rem;
+        
+    }
+
+    header .navbar ul li a {
+        padding: 0.8rem;
+        margin: 1rem 0;
+        font-size: 1.8rem;
+    }
+
+    .home h3 {
+        font-size: 4rem;
+    }
+    
+    .home h1 {
+        font-size: 3rem;
+    }
+
+    .home p {
+        font-size: 2rem;
+    }
+
+    .about .row .info h3 {
+        font-size: 2.4rem;
+        padding: 1.4rem 0;
+    }
+
+
+    .education .box-container .bo {
+        width: 100%;
+    }
+}
+
+@media (max-width:500px) {
+    header {
+        width: 70vw; 
+    }
+
+    .about .row .counter .box {
+        width: 100%;
+    }
+    body {
+        padding: 10px;
+    }
+
+    header .user img {
+        height: 7rem;
+        width: 6.5rem;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 1rem;
+        border: 0.2rem solid #f9ca24;
+    }
+
+    header .user .name {
+        font-size: 1.7rem;
+        
+    }
+    
+    header .user .post {
+        font-size: 1.3rem;
+        
+    }
+
+    header .navbar ul li a {
+        padding: 0.8rem;
+        margin: 1rem 0;
+        font-size: 1.8rem;
+    }
+
+    .home h3 {
+        font-size: 2.4rem;
+    }
+    
+    .home h1 {
+        font-size: 2rem;
+    }
+
+    .home p {
+        font-size: 1.3rem;
+        padding: 0.8rem 0;
+    }
+
+    .heading {
+        margin: 0 4rem;
+        font-size: 2.4rem;
+    }
+
+    .about .row .info h3 {
+        font-size: 1.4rem;
+        padding: 1rem 0;
+        padding-right: 1.5rem;
+    }
+
+    .btn {
+        padding: 0.3rem 1rem;
+        margin-top: 1rem;
+        margin-right: 2rem;
+        font-size: 1.4rem;
+        width: 15rem;
+    }
+
+    .education .box-container .bo {
+        width: 100%;
+    }
+
+}
+
+
+
+@media (max-width:409px) {
+    header {
+        width: 60vw; 
+    }
+
+    .about .row .counter .box {
+        width: 100%;
+    }
+    body {
+        padding: 7px;
+    }
+
+    header .user img {
+        height: 7rem;
+        width: 6.5rem;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 1rem;
+        border: 0.2rem solid #f9ca24;
+    }
+
+    header .user .name {
+        font-size: 1.4rem;
+        
+    }
+    
+    header .user .post {
+        font-size: 1.2rem;
+        
+    }
+
+    header .navbar ul li a {
+        padding: 0.8rem;
+        margin: 1rem 0;
+        font-size: 1.8rem;
+    }
+
+    .home h3 {
+        font-size: 2rem;
+    }
+    
+    .home h1 {
+        font-size: 1.8rem;
+    }
+
+    .home p {
+        font-size: 1.1rem;
+        padding: 0.5rem 0;
+    }
+
+    .heading {
+        margin: 0 4rem;
+        font-size: 2.2rem;
+    }
+
+    .about .row .info h3 {
+        font-size: 1.4rem;
+        padding: 1rem 0;
+        padding-right: 1.5rem;
+    }
+
+    .btn {
+        padding: 0.3rem 1rem;
+        margin-top: 1rem;
+        margin-right: 2rem;
+        font-size: 1.4rem;
+        width: 14.5rem;
+    }
+
+    .education .box-container .bo {
+        width: 100%;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
